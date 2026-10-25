@@ -1,16 +1,22 @@
-rule,severity,error_count
-invalid_order_id_format,critical,0
-duplicate_order_id,critical,22
-invalid_region,critical,0
-invalid_product,critical,31
-invalid_quantity_conversion,critical,0
-invalid_salesamount_conversion,critical,16
-invalid_discount_conversion,critical,9
-invalid_quantity_range,critical,24
-invalid_sales_amount_range,critical,22
-invalid_discount_range,critical,29
-invalid_orderdate_conversion,critical,3
-invalid_deliverydate_conversion,critical,10
-delivery_before_order,critical,18
-invalid_phone,warning,34
-missing_customer_name,critical,22
+rule,severity,invalid_rows,description
+missing_order_id,critical,0,OrderID je povinné.
+invalid_order_id_format,critical,0,OrderID musí mať formát ORD a štyri číslice.
+duplicate_order_id,critical,22,OrderID musí byť jedinečné.
+invalid_region,critical,0,Region musí byť jedna z povolených kategórií.
+invalid_product,critical,31,Product musí byť jedna z povolených kategórií.
+missing_quantity,critical,0,Quantity nesmie chýbať.
+quantity_conversion_error,critical,5,Quantity sa musí dať skonvertovať na číslo.
+invalid_quantity_rule,critical,24,Quantity musí byť kladné celé číslo.
+missing_sales_amount,critical,6,SalesAmount nesmie chýbať.
+sales_amount_conversion_error,critical,16,SalesAmount sa musí dať skonvertovať na číslo.
+invalid_sales_amount_rule,critical,0,SalesAmount musí byť kladná hodnota.
+missing_discount,critical,12,Discount nesmie chýbať.
+discount_conversion_error,critical,9,Discount sa musí dať skonvertovať na číslo.
+invalid_discount_range,critical,8,Discount musí byť v rozsahu 0 až 100.
+missing_order_date,critical,0,OrderDate nesmie chýbať.
+invalid_order_date,critical,3,OrderDate musí byť platný dátum.
+missing_delivery_date,critical,1,DeliveryDate nesmie chýbať.
+invalid_delivery_date,critical,9,DeliveryDate musí byť platný dátum.
+delivery_before_order,critical,18,DeliveryDate nesmie byť pred OrderDate.
+missing_customer_name,warning,22,CustomerName chýba; záznam je ponechaný ako upozornenie.
+invalid_phone_number,warning,34,Vyplnené telefónne číslo musí mať 10 až 15 číslic.
