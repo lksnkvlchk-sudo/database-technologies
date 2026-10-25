@@ -1,0 +1,16 @@
+rule,severity,error_count
+invalid_order_id_format,critical,0
+duplicate_order_id,critical,22
+invalid_region,critical,0
+invalid_product,critical,31
+invalid_quantity_conversion,critical,0
+invalid_salesamount_conversion,critical,16
+invalid_discount_conversion,critical,9
+invalid_quantity_range,critical,24
+invalid_sales_amount_range,critical,22
+invalid_discount_range,critical,29
+invalid_orderdate_conversion,critical,3
+invalid_deliverydate_conversion,critical,10
+delivery_before_order,critical,18
+invalid_phone,warning,34
+missing_customer_name,critical,22
